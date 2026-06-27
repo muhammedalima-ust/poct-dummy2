@@ -52,7 +52,7 @@ public class PactCreated {
     @PactTestFor(pactMethod = "getProduct")
     void testGetProduct(MockServer mockServer) {
  
-        var product = new Client(mockServer.getUrl()).getProduct(123);
+        var product = new Client(mockServer.getUrl()).getProduct(101);
         assertEquals(101, product.productId());
         assertEquals("Water Bottle", product.name());
         assertEquals(2000.0, product.price(),0);
