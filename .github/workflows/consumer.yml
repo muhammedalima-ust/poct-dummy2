@@ -25,12 +25,12 @@ jobs:
 
 
       - name: 2. Run Consumer Tests & Publish Contracts
-        working-directory: week4provider
+        working-directory: week4consumer
         run: |
           mvn -Dtest=PactCreated test
       
       - name: 3. Consumer Publish Contracts to the Borker
-        working-directory: week4provider
+        working-directory: week4consumer
         run: |
           pact-broker publish target/pacts \
             --consumer-app-version=${{ github.sha }} \
@@ -39,7 +39,7 @@ jobs:
             --broker-token=${{ secrets.PACT_TOKEN}}
 
       - name: 6. Can I deploy
-        working-directory: week4provider
+        working-directory: week4consumer
         env:
             CONTRACT_VERSION: ${{ github.sha }} 
         run: |
