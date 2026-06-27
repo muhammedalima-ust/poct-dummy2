@@ -42,4 +42,16 @@ jobs:
             --environment production \
             --broker-base-url=${{secrets.PACT_URL}} \
             --broker-token=${{secrets.PACT_TOKEN}}
+    
+      - name: 6. Can I deploy
+        working-directory: week4provider
+        env:
+            CONTRACT_VERSION: ${{ github.sha }} 
+        run: |
+          pact-broker can-i-deploy \
+          --pacticipant users-consumers \
+          --version $CONTRACT_VERSION \
+          --to-environment production \
+          --broker-base-url=${{secrets.PACT_URL}} \
+          --broker-token=${{ secrets.PACT_TOKEN}}
       
