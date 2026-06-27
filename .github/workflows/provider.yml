@@ -27,7 +27,7 @@ jobs:
       - name: 4. Run Provider Verification
         working-directory: week4provider
         run: |
-          mvn -Dtest=OmsProviderVerification \
+          mvn -Dtest=VerificationTest \
               -Dgit.sha=${{ github.sha }} \
               -Dpact.broker.url=${{secrets.PACT_URL}} \
               -Dpact.broker.token=-${{secrets.PACT_TOKEN}} \
