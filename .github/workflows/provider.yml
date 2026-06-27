@@ -1,4 +1,4 @@
-name: Consumer
+name: Provided
 
 on: [push, pull_request]
 
