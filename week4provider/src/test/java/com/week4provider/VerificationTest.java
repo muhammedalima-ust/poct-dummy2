@@ -63,7 +63,7 @@ public class VerificationTest {
                 .withStatus(200)
                 .withHeader("Content-Type", "application/json")
                 .withBody("""
-                    {"productId": 101, "name": "Water Bottle", "total": 2000.0}
+                    {"productId": 101, "name": "Water Bottle", "price": 2000.0}
                 """)));
     }
 
