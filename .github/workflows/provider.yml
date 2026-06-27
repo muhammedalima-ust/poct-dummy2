@@ -1,4 +1,4 @@
-name: Provider
+name: Consumer
 
 on: [push, pull_request]
 
