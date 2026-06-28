@@ -1,4 +1,4 @@
-name: Consumer
+name: Muhammed Ali Consumer
 
 on: [push, pull_request]
 

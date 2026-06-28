@@ -1,4 +1,4 @@
-name: Provided
+name: Muhammed Ali Provider
 
 on: [push, pull_request]
 
